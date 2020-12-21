@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="ISO-8859-1" />
+		<title>Login</title>
+		<link rel="stylesheet" href="CSS.css" type="text/css" media="screen" title="Stylesheet" />
+	</head>
+	<body>
+	<!-- Wicket -->
+	<form wicket:id="login">
+	<div id="main_wrapper">
+		<div id="contentLogin"><br />
+			<h2 style="text-align:center">Willkommen bei der Ausleihverwaltung der HAW-Hamburg </h2>  <br />
+			<h3 style="text-align:center">Bitte melden Sie sich mit Ihrer HAW-Kennung und dem dazugeh&ouml;rigem Passwort an.</h3><br />
+			
+			<table id="tableNervt">
+				  <tr>
+				    <td>HAW-Kennung:</td>
+				    <td><input wicket:id="hawKennung" class="input" name="HAW-Kennung" type="text" size="20" maxlength="25" value=""></td>
+				  </tr>
+				  <tr>
+				    <td>Passwort: </td>
+				    <td><input wicket:id="passwort" class="input" name="Passwort" type="password" size="20" maxlength="25" value=""></td>
+				  </tr>
+				</table>
+				<br />
+			<input type="submit" size="15" class="button" value="OK"/>
+		</div>		
+	</div>
+	</form>	
+</body>
+</html>

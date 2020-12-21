@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="ISO-8859-1" />
+		<title>User Verwaltung</title>
+		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="CSS.css" type="text/css" media="screen" title="Stylesheet" />
+	</head>
+	<body>
+		<div id="main_wrapper">	
+		<div id="header" wicket:id="headerPanel"></div>	
+		<div id="navigation" wicket:id="navigationPanel">navigation</div>		
+		<div id="content">
+			<div id="content_inner">
+	
+				<br />
+				<form wicket:id="suchenNutzerForm">
+					<div>
+						<h2 style="text-align:center">Nutzer suchen</h2>
+							<table id="contentSuchenNutzer">
+							  <tr>
+							    <td>HAW-Kennung:</td>
+							    <td><input wicket:id="suchenKennung" class="input" name="Kennung" type="text" size="20" maxlength="10" value="HAW-Kennung"/></td>
+							  </tr>
+							  <tr>
+							    <td>Vorname:</td>
+							    <td><input wicket:id="suchenVorname" class="input" name="Vorname" type="text" size="20" maxlength="35" value="Vorname"/></td>
+							  </tr>
+							  <tr>
+							    <td>Nachname: </td>
+							    <td><input wicket:id="suchenNachname" class="input" name="Nachname" type="text" size="20" maxlength="35" value="Nachname"/></td>
+							  </tr>
+							  <tr>
+					    		<td>Nutzer suchen: </td>
+					    		<td><input type="submit" class="button" name="Suchen" size="20" maxlength="25" value="Suchen"/></td>
+					  		</tr>
+						</table>
+					</div>
+				</form>
+				<h3 style="text-align:center" wicket:id="error"></h3>
+				<br />
+				<table id="tableNervt">
+					<tr>
+					   <th wicket:id="kennungFoundUsers"></th><th wicket:id="vornameFoundUsers"></th><th wicket:id="nachnameFoundUsers"></th><th wicket:id="emailFoundUsers"></th><th wicket:id="telefonFoundUsers"></th><th wicket:id="historieFoundUsers"></th><th wicket:id="berechtigungFoundUsers"></th><th wicket:id="graueListeFoundUsers"></th>
+					</tr>
+					<tr wicket:id="rowsUser">
+						<td wicket:id="kennungGefunden"></td>
+					    <td wicket:id="vornameGefunden"></td>
+					    <td wicket:id="nachnameGefunden"></td>
+					    <td wicket:id="emailGefunden"></td>
+					    <td wicket:id="telefonGefunden"></td>
+					    <td wicket:id="historie"></td>
+					    <td wicket:id="berechtigungSetzen"></td>
+					    <td wicket:id="toGrey"></td>
+					</tr>
+				</table>
+				<br />
+				 <form wicket:id="formButtons">
+				 <table id="contentSuchenNutzer">
+							  <tr>
+							    <td><input wicket:id="graueListe" type="submit" class="button" value="Graue Liste" /></td>
+							    <td><input wicket:id="schwarzeListe" type="submit" class="button" value="Schwarze Liste" /></td>
+							    <td><input wicket:id="berechtigung" type="submit" class="button" value="Berechtigung" /></td>
+
+							  </tr>
+						</table>
+				 </form>
+			</div>
+		</div>
+		<div id="footer" wicket:id="footerPanel">footer</div>
+		</div>
+	</body>
+</html>

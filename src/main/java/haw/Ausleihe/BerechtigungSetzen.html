@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="ISO-8859-1" />
+		<title>Berechtigung verwalten</title>
+		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="CSS.css" type="text/css" media="screen" title="Stylesheet" />
+	</head>
+	<body>
+	<div id="main_wrapper">
+	<div id="header" wicket:id="headerPanel"></div>
+	
+		<div id="navigation" wicket:id="navigationPanel">navigation</div>		
+		
+		<div id="content">
+			<div id="content_inner">
+				<br/>
+				<h2 style="text-align:center" wicket:id="labelUserId"></h2>
+				<br/>
+				<table id="tableNervt">
+					<tr>
+						<th>Name:</th><th>E-Mail:</th><th>Telefon: </th>
+					</tr>
+					<tr>
+						<td wicket:id="labelUserName"></td><td wicket:id="labelUserEMail"></td><td wicket:id="labelUserTelefon"></td>
+					</tr>
+				</table>
+				<br/>
+				<h3 style="text-align:center"> Bisherige Berechtigungen</h3>
+				<h3 style="text-align:center" wicket:id="errorBisherige"></h3>
+				<table id="tableNervt">
+					<tr>
+						<th wicket:id="idHeadAktuell"></th><th wicket:id="nameHeadAktuell"></th><th wicket:id="loeschenHeadAktuell"></th>
+					</tr>
+					<tr wicket:id="rowAktuelleBerechtigungen">
+						<td wicket:id="id"></td>
+					    <td wicket:id="kennung"></td>
+					    <td wicket:id="loeschenBerechtigung"></td>	    
+					</tr>
+				</table>
+				<br/>
+				<h3 style="text-align:center">Neue Berechtigungen setzen</h3>
+				<h3 style="text-align:center" wicket:id="errorNeue"></h3>
+				<table id="tableNervt">
+					<tr>
+						<th wicket:id="idHeadNeu"></th><th wicket:id="nameHeadNeu"></th><th wicket:id="addHeadNeu"></th>
+					</tr>
+					<tr wicket:id="rowNeueBerechtigungen">
+						<td wicket:id="idNeue"></td>
+					    <td wicket:id="kennungNeue"></td>
+					    <td wicket:id="neueBerechtigung"></td>	    
+					</tr>
+				</table>			
+			</div>
+		</div>			
+		<div id="footer" wicket:id="footerPanel">footer</div>
+	</div>	
+</body>
+</html>

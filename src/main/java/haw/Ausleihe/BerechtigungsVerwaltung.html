@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="ISO-8859-1" />
+		<title>Berechtigungen verwalten</title>
+		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="CSS.css" type="text/css" media="screen" title="Stylesheet" />
+	</head>
+	<body>
+		<div id="main_wrapper">	
+		<div id="header" wicket:id="headerPanel"></div>	
+		<div id="navigation" wicket:id="navigationPanel">navigation</div>		
+		<div id="content">
+			<div id="content_inner">
+				<br />
+				<form wicket:id="formNeueBerechtigung">
+					<div>
+						<h2 style="text-align:center">Neue Berechtigungsgruppe</h2>
+							<table id="contentSuchenNutzer">
+							  <tr>
+							    <td>Gruppen-Namen:</td>
+							    <td><input wicket:id="gruppeNamen" class="input" name="gruppe" type="text" size="20" maxlength="10" value="gruppeNamen"/></td>
+							  </tr>
+							  <tr>
+							    <td>Produktkatalog einsehen:</td>
+							    <td><input wicket:id="chkProdukteSehen" class="input" type="checkbox" /></td>
+							    <td>Produkte reservieren:</td>
+							    <td><input wicket:id="chkReservieren" class="input" type="checkbox" /></td>
+							    <td>Buchung best&auml;tigen:</td>
+							    <td><input wicket:id="chkBuchungBestaetigen" class="input" type="checkbox" /></td>
+							    <td>Ausleihe vornehmen:</td>
+							    <td><input wicket:id="chkAusleihen" class="input" type="checkbox" /></td>
+							  </tr>
+							  <tr>
+							    <td>R&uuml;cknahme:</td>
+							    <td><input wicket:id="chkRuecknahme" class="input" type="checkbox" /></td>
+							    <td>Artikel editieren:</td>
+							    <td><input wicket:id="chkArtikelEditieren" class="input" type="checkbox" /></td>
+							    <td>Artikel l&ouml;schen:</td>
+							    <td><input wicket:id="chkArtikelLoeschen" class="input" type="checkbox" /></td>
+							    <td>Artikel erstellen:</td>
+							    <td><input wicket:id="chkArtikelErstellen" class="input" type="checkbox" /></td>
+							  </tr>
+							   <tr>
+							    <td>Graueliste einsehen:</td>
+							    <td><input wicket:id="chkGraueListeSehen" class="input" type="checkbox" /></td>
+							    <td>Graueliste bearbeiten:</td>
+							    <td><input wicket:id="chkGraueListeBearbeiten" class="input" type="checkbox" /></td>
+							    <td>Schwarzeliste einsehen:</td>
+							    <td><input wicket:id="chkSchwarzeListeSehen" class="input" type="checkbox" /></td>
+							    <td>Schwarzeliste bearbeiten:</td>
+							    <td><input wicket:id="chkSchwarzeListeBearbeiten" class="input" type="checkbox" /></td>
+							  </tr>
+							  <tr>
+							    <td>Eigenes Labor editieren:</td>
+							    <td><input wicket:id="chkEigenesLabor" class="input" type="checkbox" /></td>
+							    <td>Administrator Berechtigung:</td>
+							    <td><input wicket:id="chkAdmin" class="input" type="checkbox" /></td>
+							  </tr>
+							  <tr>
+							  	<td>Gruppe erstellen: </td>
+					    		<td><input type="submit" class="button" name="erstellen" size="20" maxlength="25" value="erstellen"/></td>
+					  		</tr>
+						</table>
+					</div>
+				</form>	
+				<br />
+				<h2 style="text-align:center">Aktuelle Berechtigungsgruppen</h2>
+				<table id="tableNervt">
+					<tr>
+					   <th wicket:id="idHeadUserGroup"></th><th wicket:id="nameHeadUserGroup"></th><th wicket:id="loeschenUserGroup"></th><th wicket:id="bearbeitenUserGroup"></th><th wicket:id="detailsUserGroup"></th>
+					</tr>
+					<tr wicket:id="rows">
+						<td wicket:id="id"></td>
+					    <td wicket:id="name"></td>
+					    <td wicket:id="loeschen"></td>
+					    <td wicket:id="bearbeiten"></td>
+					    <td wicket:id="details"></td>
+					</tr>
+				</table>
+				<h3 style="text-align:center" wicket:id="error"></h3>			
+			</div>
+		</div>
+		<div id="footer" wicket:id="footerPanel">footer</div>
+		</div>
+	</body>
+</html>

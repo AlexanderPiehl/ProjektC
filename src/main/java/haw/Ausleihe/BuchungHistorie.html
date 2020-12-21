@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="ISO-8859-1" />
+		<title>BuchungsHistorie</title>
+		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="CSS.css" type="text/css" media="screen" title="Stylesheet" />
+	</head>
+	<body>
+		<div id="main_wrapper">
+	
+
+	<div id="header" wicket:id="headerPanel"></div>
+		
+		<div id="navigation" wicket:id="navigationPanel">navigation</div>
+		
+		<div id="content">
+			<div id="content_inner">
+				<br /> <br />
+				<h2 style="text-align:center">Hier kann die Buchungshistorie eingesehen werden</h2><br />
+				<h3 style="text-align:center" wicket:id="error"></h3>
+				<table id="tableNervt">
+					<tr>
+					   <th wicket:id="idHeadReservierungen"></th><th wicket:id="ausleiherHeadReservierungen"></th><th wicket:id="abwicklerHeadReservierungen"></th><th wicket:id="vonHeadReservierungen"></th><th wicket:id="bisHeadReservierungen"></th><th wicket:id="detailsReservierung"></th>
+					</tr>
+					<tr wicket:id="rows">
+						<td wicket:id="id"></td>
+					    <td wicket:id="ausleiher"></td>
+					    <td wicket:id="abwickler"></td>
+					    <td wicket:id="von"></td>
+					    <td wicket:id="bis"></td>
+					    <td wicket:id="bearbeiten"></td>
+					</tr>
+				</table>
+			</div>
+		</div>		
+		<div id="footer" wicket:id="footerPanel">footer</div>
+	</div>
+</body>
+</html>

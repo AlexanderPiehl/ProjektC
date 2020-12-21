@@ -1,0 +1,6 @@
+= Ausleihe
+
+== Start Application
+* Start MySql-Database
+** Execute via command line at root docker-compose up -d
+* Execute Start.java as standard java application

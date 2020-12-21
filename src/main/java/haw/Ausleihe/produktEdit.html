@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="ISO-8859-1" />
+		<title>Produkt editieren</title>
+		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="CSS.css" type="text/css" media="screen" title="Stylesheet" />
+	</head>
+	<body>
+	<!-- Wicket -->
+		<div id="main_wrapper">
+	
+	<div id="header" wicket:id="headerPanel"></div>
+		
+		<div id="navigation" wicket:id="navigationPanel">navigation</div>
+		<form wicket:id="ProduktEditForm">
+		<div id="content">
+			<div id="content_inner">
+				<br /> <br />
+				<h2 style="text-align:center">Hier k&ouml;nnen bestehende Gegenst&auml;nde angepasst und ge&auml;ndert werden</h2><br />
+				<div id="content_block1">
+					<table >
+					  <tr>
+					    <td>Der Name:</td>
+					    <td><input wicket:id="name" class="input" name="Name" type="text" size="20" maxlength="25" value="Name"></td>
+					  </tr>
+					  <tr>
+					    <td>Die Kategorie:</td>
+					    <td><input wicket:id="kategorie" class="input" name="Kategorie" type="text" size="20" maxlength="25" value="Kategorie"></td>
+					  </tr>
+					  <tr>
+					    <td>Der Typ: </td>
+					    <td><input wicket:id="typ" class="input" name="Typ" type="text" size="20" maxlength="25" value="Typ"></td>
+					  </tr>
+					  <tr>
+					    <td>Die Art:</td>
+					    <td><input wicket:id="art" class="input" name="Art" type="text" size="20" maxlength="25" value="Art"></td>
+					  </tr>
+					  <tr>
+					    <td>Der Verzeichnisbaum:</td>
+					    <td><input wicket:id="verzeichnisbaum" class="input" name="Verzeichnisbaum" type="text" size="20" maxlength="25" value="Verzeichnisbaum"></td>
+					  </tr>
+					  <tr>
+					    <td>Der Hersteller:</td>
+					    <td><input wicket:id="herstellerersteller" class="input" name="Hersteller" type="text" size="20" maxlength="25" value="Hersteller"></td>
+					  </tr>
+					  <tr>
+					    <td>Der Preis:</td>
+					    <td><input wicket:id="preis" class="input" name="Preis" type="text" size="20" maxlength="25" value="Preis"></td>
+					  </tr>
+					  <tr>
+					    <td>Die Menge:</td>
+					    <td><input wicket:id="menge" class="input" name="Menge" type="text" size="20" maxlength="25" value="Menge"></td>
+					  </tr>
+					  <tr>
+					    <td>Der Status:</td>
+					    <td><input wicket:id="status" class="input" name="Status" type="text" size="20" maxlength="25" value="Status"></td>
+					  </tr>
+					  <tr>
+					    <td>Der Zustand:</td>
+					    <td><input wicket:id="zustand" class="input" name="Zustand" type="text" size="20" maxlength="25" value="Zustand"></td>
+					  </tr>
+					  <tr>
+					    <td>Bemerkung:</td>
+					    <td><input wicket:id="bemerkung" class="input" name="Bemerkung" type="text" size="20" maxlength="25" value="Bemerkung"></td>
+					  </tr>
+					  <tr>
+					    <td>Das Kaufdatum:</td>
+					    <td><input wicket:id="kaufdatum" class="input" name="Kaufdatum" type="text" size="20" maxlength="25" value="Kaufdatum"></td>
+					  </tr>
+					  <tr>
+					    <td>Der GarantieZeit:</td>
+					    <td><input wicket:id="garantieZeitraum" class="input" name="GarantieZeitraum" type="text" size="20" maxlength="25" value="GarantieZeit"></td>
+					  </tr>
+					  <tr>
+					    <td>Das Garantie Ablaufdatum</td>
+					    <td><input wicket:id="ablaufGarantie" class="input" name="AblaufGarantie" type="text" size="20" maxlength="25" value="AblaufGarantie"></td>
+					  </tr>
+					</table>
+				</div>
+				<div id="content_block2">
+					<table>
+					  <tr>
+					    <td>Die Servicehotline:</td>
+					    <td><input wicket:id="servicehotline" class="input" name="Servicehotline" type="text" size="20" maxlength="25" value="Servicehotline"></td>
+					  </tr>
+					  <tr>
+					    <td>Der Lieferant:</td>
+					    <td><input wicket:id="lieferant" class="input" name="Lieferant" type="text" size="20" maxlength="25" value="Lieferant"></td>
+					  </tr>
+					  <tr>
+					    <td>Die Volumen Nummer:</td>
+					    <td><input wicket:id="volNr" class="input" name="VolNr" type="text" size="20" maxlength="25" value="VolNr"></td>
+					  </tr>
+					  <tr>
+					    <td>Die Seriennummer:</td>
+					    <td><input wicket:id="seriennummer" class="input" name="Seriennummer" type="text" size="20" maxlength="25" value="Seriennummer"></td>
+					  </tr>
+					  <tr>
+					    <td>Die Verpackung:</td>
+					    <td><input wicket:id="verpackung" class="input" name="Verpackung" type="text" size="20" maxlength="25" value="Verpackung"></td>
+					  </tr>
+					  <tr>
+					    <td>Das Packmass:</td>
+					    <td><input wicket:id="packmass" class="input" name="Packmass" type="text" size="20" maxlength="25" value="Packmass"></td>
+					  </tr>
+					  <tr>
+					    <td>Das Gewicht:</td>
+					    <td><input wicket:id="gewicht" class="input" name="Gewicht" type="text" size="20" maxlength="25" value="Gewicht"></td>
+					  </tr>
+					  <tr>
+					    <td>Der Leuchtmitteltyp:</td>
+					    <td><input wicket:id="leuchtmitteltyp" class="input" name="Leuchtmitteltyp" type="text" size="20" maxlength="25" value="Leuchtmitteltyp"></td>
+					  </tr>
+					  <tr>
+					    <td>Der Akkutyp:</td>
+					    <td><input wicket:id="akkutyp" class="input" name="Akkutyp" type="text" size="20" maxlength="25" value="Akkutyp"></td>
+					  </tr>
+					  <tr>
+					    <td>Der Batterietyp:</td>
+					    <td><input wicket:id="batterietyp" class="input" name="Batterietyp" type="text" size="20" maxlength="25" value="Batterietyp"></td>
+					  </tr>
+					  <tr>
+					    <td>Die Batterieanzahl:</td>
+					    <td><input wicket:id="batterieanzahl" class="input" name="Batterieanzahl" type="text" size="20" maxlength="25" value="Batterieanzahl"></td>
+					  </tr>
+					  <tr>
+					    <td>Das Speichermedium:</td>
+					    <td><input wicket:id="speichermedium" class="input" name="Speichermedium" type="text" size="20" maxlength="25" value="Speichermedium"></td>
+					  </tr>
+					  <tr>
+					    <td>Die elektrische Leistung:</td>
+					    <td><input wicket:id="elektrischeLeistung" class="input" name="ElektrischeLeistung" type="text" size="20" maxlength="25" value="El. Leistung"></td>
+					  </tr>
+					</table>
+				</div>
+				<div id="content_block3">
+					<table>
+					  <tr>
+					    <td><br />Best&auml;tigung der Eingaben: </td>
+					    <td><br /><input type="submit" class="button" name="Absenden" size="20" maxlength="25" value="Absenden"></td>
+					  </tr>
+					</table>
+					<br />
+				</div>
+			</div>
+		</div>
+		</form>	
+		
+		<div id="footer" wicket:id="footerPanel">footer</div>
+	</div>
+</body>
+</html>

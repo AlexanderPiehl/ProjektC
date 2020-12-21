@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="ISO-8859-1" />
+		<title>Login</title>
+		<link rel="stylesheet" href="CSS.css" type="text/css" media="screen" title="Stylesheet" />
+	</head>
+	<body>
+	
+	<!-- Wicket -->
+	<form wicket:id="UserNeuForm">
+	<div id="main_wrapper">
+		<div id="contentLogin"> <br />
+			<h2 style="text-align:center">Willkommen bei der Ausleihverwaltung der HAW-Hamburg </h2>  <br />
+			<h3 style="text-align:center">Bitte f&uuml;llen Sie die folgenden Felder aus.</h3><br />
+			<table >
+				  <tr>
+				    <td>Vorname:</td>
+				    <td><input wicket:id="firstname" class="input" name="firstname" type="text" size="20" maxlength="25" value="Vorname"></td>
+				  </tr>
+				  <tr>
+				    <td>Nachname:</td>
+				    <td><input wicket:id="lastname" class="input" name="lastname" type="text" size="20" maxlength="25" value="Nachname"></td>
+				  </tr>
+				  <tr>
+				    <td>E-Mail:</td>
+				    <td><input wicket:id="email" class="input" name="email" type="text" size="20" maxlength="25" value="E-Mail"></td>
+				  </tr>
+				  <tr>
+				    <td>Telefonnummer:</td>
+				    <td><input wicket:id="phone" class="input" name="phone" type="text" size="20" maxlength="25" value="TelNr"></td>
+				  </tr>
+				  <tr>
+				    <td><br />Best&auml;tigung der Eingaben:</td>
+				    <td><br /><input type="submit" class="button" name="Absenden" size="20" maxlength="25" value="Absenden"></td>
+				  </tr>
+			</table>
+		</div>
+		
+	</div>
+	</form>	
+</body>
+</html>

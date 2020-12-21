@@ -1,0 +1,264 @@
+@CHARSET "ISO-8859-1";
+
+.font{
+font-size: 21px;
+}
+
+body{
+	text-alaign: center;
+	font-family:Verdana;
+}
+
+#main_wrapper{
+	min-width: 840px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	background-color: #eee;
+	border-left: 3px solid #000;
+	border-right: 3px solid #000;
+	border-top: 3px solid #000;
+	border-bottom: 3px solid #000;
+	-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+
+}
+
+#logo{
+	width: 170px;
+	float: left;
+}
+
+#shoppingcart{
+	width: 100px;
+	float: right;
+}
+
+#header{
+background-color: #eee;
+}
+
+#navigation{
+clear: both;
+background-color: #eee;
+	width: 170px;
+	float: left;
+}
+
+#content{
+	background-color: #fff;
+	margin-left:170px;
+	top: 0px;
+	clear: right;
+}
+
+#footer{
+background-color: #eee;
+clear: both;
+}
+
+#header_inner, #navigation_inner, #content_inner, #footer_inner, #logo_inner, #shoppingcart_inner, #contentLogin{
+	overflow: hidden;
+}
+
+#logo_inner{
+	width: 170px;
+	height: 100px;
+	float: left;
+	border-bottom: 3px solid #000;
+}
+
+#shoppingcart_inner{
+	width: 100px;
+	height: 100px;
+	float: right;
+	border-bottom: 3px solid #000;
+}
+
+#header_inner{
+	height: 100px;
+	border-left: 3px solid #000;
+	text-align: center;
+	margin-left:170px;
+	margin-right:100px;
+	border-bottom: 3px solid #000;
+	font-size: large;
+	font-weight: bold;
+}
+
+#header_block1{
+	float: left;
+	width: 33%;
+	padding-top: 10px;
+}
+#header_block2{
+	float: left;
+	width: 33%;
+	padding-top: 10px;
+}
+#header_block3{
+	float: left;
+	width: 33%;
+	padding-top: 10px;
+}
+
+#navigation_inner{
+	min-height: 525px;
+	padding: 0em .5em;
+}
+
+#content_inner{
+	position: relative;
+	resize:both;
+	overflow:auto;
+	min-height: 525px;
+	/*padding: 1em .8em;*/
+	border-left: 3px solid #000;
+	border-bottom: 3px solid #000;
+}
+
+#content_inner .table2, td{
+	border: 0px solid #000;
+}
+
+#content_block1{
+	text-align: center;
+	float: left;
+	width: 50%;
+}
+
+#content_block2{
+	text-align: center;
+	float: left;
+	width: 50%;
+}
+
+#content_block3{
+	text-align: center;
+	clear: both;
+}
+
+#contentLogin{
+	min-height: 520px;
+	background-color: #fff;
+	text-align: center;
+}
+#contentSuchenNutzer td{
+	text-align: left;
+	border-collapse:collapse;
+	
+	font-size: 21;
+	padding: 5px 3px 3px 5px;
+}
+#content_SuchenForm{
+	text-align: center;
+}
+
+#tableNervt td{
+	border: 2px solid;
+	min-width: 120px;
+	text-align: center;
+	font-size: 21;
+	padding: 5px 3px 3px 5px;	
+}
+
+
+table{
+	border-collapse:collapse;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#tableTh th{
+	border: 2px solid;
+	min-width: 200px;
+	text-align: center;
+	font-size: 21;
+	padding: 5px 3px 3px 5px;
+}
+
+
+
+#select{
+	border: 1px solid #000;
+	width:150px;
+	
+}
+#footer_inner{
+	/*padding: .5em 1em;*/
+	text-align: center;
+}
+.input
+{
+	font-family: Verdana;
+	font-weight: bold;
+	color: #212121;
+	
+	border: 2px solid #000;
+	-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+	background: rgb(255,255,255);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.49, rgb(250,250,250)),
+		color-stop(0.5, rgb(255,255,255))
+	);
+	background-image: -moz-linear-gradient(
+		center bottom,
+		rgb(250,250,250) 49%,
+		rgb(255,255,255) 50%
+	);
+	padding: 3px 6px;
+	min-width:114px;
+	}
+	
+h1{
+font-size: 12px;
+}
+.button
+{
+	cursor: pointer;
+
+	font-family: Verdana;
+	font-weight: bold;
+	color: #212121;
+
+	text-shadow: 1px 1px 1px rgba(237, 237, 237, 1);
+
+	padding: 3px 6px;
+
+	border: 2px solid #000;
+	-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+
+	background: rgb(255,255,255);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.49, rgb(215,215,215)),
+		color-stop(0.5, rgb(225,225,225))
+	);
+	background-image: -moz-linear-gradient(
+		center bottom,
+		rgb(215,215,215) 49%,
+		rgb(225,225,225) 50%
+	);
+	
+	min-width:130px;
+	/*-moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+	-webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+	*/
+}
+
+.tableWithBorder, .tableWithBorder td{
+	
+	border: 2px solid;
+	min-width: 200px;
+	text-align: center;
+	font-size: 21;
+	padding: 5px 3px 3px 5px;
+	border-collapse:collapse;
+
+}

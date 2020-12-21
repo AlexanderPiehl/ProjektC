@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="ISO-8859-1" />
+		<title>Testseite</title>
+		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="CSS.css" type="text/css" media="screen" title="Stylesheet" />
+	</head>
+	<body>
+	<wicket:panel>
+	<!-- Wicket -->
+	<form wicket:id="form">
+		<div id="header">
+			<div id="logo">
+				<div id= "logo_inner">
+					<a href="#" wicket:id="StartSeite"> <img src="Logo.jpeg" alt="Logo"/> </a>
+				</div>
+			</div>
+			<div id="shoppingcart">
+				<div id="shoppingcart_inner">
+					<a href="#" wicket:id="warenkorb">  <img src="Warenkorb.jpeg" alt="Warenkorb"/> </a>
+				</div>
+			</div>
+			
+			<div id="header_inner">
+				<div id="header_block1">
+					<span class="font">Ausleihverwaltung</span> <br /><br />
+					
+					<input wicket:id="reservierung" type="submit" class="button" value="Reservierung" /> <input wicket:id="buchung" type="submit" class="button" value="Buchung" />
+					
+				</div>
+				<div id="header_block2">
+				
+					<input wicket:id="sucheTextField" class="input" name="suche" type="text" size="15" maxlength="25" value="Suche"> <input wicket:id="suche" type="submit" class="button" value="Suche" />
+					<br /><br />
+					<input wicket:id="produktNeu" class="button" size="15" type="submit" value="Produkt Verwaltung" /> 
+				</div>
+				<div id="header_block3">
+					
+					<input wicket:id="Login" type="submit" size="15" class="button" value="Abmelden" />
+					<br /> <br />
+					<input wicket:id="userVerwaltung" class="button" type="submit" size="15" value="Nutzer Verwaltung" />
+				</div>
+			
+			</div>	
+			
+		</div>
+		</form>	
+		</wicket:panel>
+		</body>
+		</html>
+		
+		
+		

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="ISO-8859-1" />
+		<title>Warenkorb</title>
+		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="CSS.css" type="text/css" media="screen" title="Stylesheet" />
+	</head>
+	<body>
+	<div id="main_wrapper">
+
+	<div id="header" wicket:id="headerPanel"></div>
+		
+		<div id="navigation" wicket:id="navigationPanel">navigation</div>
+		
+		<div id="content">
+			<div id="content_inner">
+			<br />
+				<table id="tableNervt">
+					  <tr>
+					    <td wicket:id=BilderCart></td>
+					    <td wicket:id=nameCart></td>
+					    <td wicket:id=herstellerCart></td>
+					    <td wicket:id=artCart></td>
+					    <td wicket:id=KategorieCart></td>
+					    <td wicket:id=loeschenCart></td>
+					    
+					    
+					  </tr>
+					  <tr wicket:id="rows">
+					    <td><img src="Warenkorb.jpeg" alt="Bild"/></td>
+					    <td wicket:id="name"></td>
+					    <td wicket:id="Hersteller"></td>					
+					    <td wicket:id="Art"></td>
+					    <td wicket:id="Kategorie"></td>				
+					    <td wicket:id="CartLoeschen"></td>
+					    </tr>				  
+				</table>  <br/>
+				
+				
+				<tr wicket:id=InfoTextIsLoan></tr> <br/>
+				
+				<table id="tableNervt">
+				
+					  <tr>
+					    <td wicket:id=BilderIsLoan></td>
+					    <td wicket:id=herstellerIsLoan></td>
+					    <td wicket:id=nameIsLoan></td>
+					    <td wicket:id=artIsLoan></td>
+					    <td wicket:id=KategorieIsLoan></td>
+					    
+					  </tr>
+					  <tr wicket:id="rowsLoan">
+					    <td><img src="Warenkorb.jpeg" alt="Bild"/></td>
+					    <td wicket:id="HerstellerLoan"></td>
+					    <td wicket:id=nameLoan></td>
+					    <td wicket:id="ArtLoan"></td>				
+					    <td wicket:id="KategorieLoan"></td>
+					    </tr>				  
+				</table>
+				<br/>
+				<div id="content_block3">		
+					<form wicket:id="warenkrobForm">
+						<H4>Ausleihezeitraum</H4> <br/>
+					<table id="tableNervt">
+					  <tr>
+					    <td>von:</td>
+					    <td><input wicket:id="fromDate"></td>
+					  </tr>
+					  <tr>
+					    <td>bis:</td>
+					    <td><input wicket:id="toDate"></td>
+					  </tr>				  
+				</table>
+				<br/>
+				<input class="button" type="submit" value="Reservieren" />
+					</form>
+					
+					<td wicket:id="emptyCart"></td>
+				</div> 
+			</div>
+		</div>	
+		<div id="footer" wicket:id="footerPanel">footer</div>
+	</div>
+</body>
+</html>
