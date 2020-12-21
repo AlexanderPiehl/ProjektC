@@ -1,5 +1,9 @@
 = Ausleihe
 
+== Preconditions
+* Maven is installed
+* Docker is installed
+
 == Start Application
 * Start MySql-Database
 ** Execute via command line at root docker-compose up -d
