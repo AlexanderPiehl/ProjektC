@@ -1,6 +1,8 @@
 package haw.Ausleihe;
 
 import org.apache.wicket.Session;
+import org.apache.wicket.csp.CSPDirective;
+import org.apache.wicket.csp.CSPDirectiveSrcValue;
 import org.apache.wicket.request.Request;
 import org.apache.wicket.request.Response;
 import org.apache.wicket.markup.html.WebPage;
@@ -54,6 +56,8 @@ public class WicketApplication extends WebApplication
         mountPage("wartungHP", WartungHP.class);
 
 		// add your configuration here
+		getCspSettings().blocking()
+				.add(CSPDirective.STYLE_SRC, CSPDirectiveSrcValue.SELF);
 	}
 	
 	 @Override

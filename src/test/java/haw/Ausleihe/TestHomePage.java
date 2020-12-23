@@ -1,12 +1,11 @@
 package haw.Ausleihe;
 
 import Database.HibernateHelper;
-import haw.Ausleihe.HomePage;
-import haw.Ausleihe.WicketApplication;
 
 import org.apache.wicket.util.tester.WicketTester;
-import org.junit.Before;
-import org.junit.Test;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Simple test using the WicketTester
@@ -15,7 +14,7 @@ public class TestHomePage
 {
 	private WicketTester tester;
 
-	@Before
+	@BeforeEach
 	public void setUp()
 	{
 		HibernateHelper hibernateHelper = new HibernateHelper();

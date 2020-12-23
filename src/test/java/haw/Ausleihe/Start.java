@@ -1,30 +1,35 @@
 package haw.Ausleihe;
 
+import Database.HibernateHelper;
 import org.apache.wicket.Page;
+import org.apache.wicket.csp.CSPDirective;
+import org.apache.wicket.csp.CSPDirectiveSrcValue;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.eclipse.jetty.jmx.MBeanContainer;
 import org.eclipse.jetty.server.*;
-import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.util.resource.Resource;
 import org.eclipse.jetty.util.ssl.SslContextFactory;
 import org.eclipse.jetty.webapp.WebAppContext;
 
-import Database.HibernateHelper;
-
 import javax.management.MBeanServer;
 import java.lang.management.ManagementFactory;
 
-public class Start extends WebApplication {
-
-    public Start() {
-        super();
-        init();
-    }
-
-    public static void main(String[] args) throws Exception {
+/**
+ * Separate startup class for people that want to run the examples directly. Use parameter
+ * -Dcom.sun.management.jmxremote to startup JMX (and e.g. connect with jconsole).
+ */
+public class Start extends WebApplication
+{
+    /**
+     * Main function, starts the jetty server.
+     *
+     * @param args
+     */
+    public static void main(String[] args)
+    {
         HibernateHelper hibernate = new HibernateHelper();
         hibernate.initHibernate();
-        //Access.init();
+
         System.setProperty("wicket.configuration", "development");
 
         Server server = new Server();
@@ -35,13 +40,14 @@ public class Start extends WebApplication {
         http_config.setOutputBufferSize(32768);
 
         ServerConnector http = new ServerConnector(server, new HttpConnectionFactory(http_config));
-        http.setPort(8081);
+        http.setPort(8080);
         http.setIdleTimeout(1000 * 60 * 60);
 
         server.addConnector(http);
 
         Resource keystore = Resource.newClassPathResource("/keystore");
-        if (keystore != null && keystore.exists()) {
+        if (keystore != null && keystore.exists())
+        {
             // if a keystore for a SSL certificate is available, start a SSL
             // connector on port 8443.
             // By default, the quickstart comes with a Apache Wicket Quickstart
@@ -90,10 +96,13 @@ public class Start extends WebApplication {
         server.addEventListener(mBeanContainer);
         server.addBean(mBeanContainer);
 
-        try {
+        try
+        {
             server.start();
             server.join();
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
             System.exit(100);
         }
@@ -111,5 +120,8 @@ public class Start extends WebApplication {
         mountPage("buchungen", Buchungen.class);
         mountPage("graueListe", GraueListe.class);
         mountPage("impressum", Impressum.class);
+
+        getCspSettings().blocking()
+                .add(CSPDirective.STYLE_SRC, CSPDirectiveSrcValue.SELF);
     }
 }
